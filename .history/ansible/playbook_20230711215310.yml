@@ -1,6 +1,0 @@
----
-  - name: Create User
-    hosts: all
-    tasks:
-      - include_tasks: "{{ playbook_dir }}/users/create_users.yml"
-    

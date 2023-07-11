@@ -1,3 +1,0 @@
-variable "pod_definition" {
-
-}
