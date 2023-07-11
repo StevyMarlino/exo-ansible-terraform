@@ -1,0 +1,3 @@
+variable "pod_definition" {
+
+}
