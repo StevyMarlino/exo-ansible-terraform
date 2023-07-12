@@ -11,7 +11,6 @@
         dest: /etc/sudoers
         line: "{{ item }} ALL=(ALL) NOPASSWD: ALL"
       loop: "{{ admin_users }}"
-      validate: visudo -cf %s
 
     - name: Transférer les clés publiques
       authorized_key:
@@ -26,4 +25,4 @@
           - vim
           - net-tools
         state: present
-      become: true
+
