@@ -1,5 +1,6 @@
 ---
   - name: Create User
+    connection: local
     hosts: all
     vars:
       admin_users:
