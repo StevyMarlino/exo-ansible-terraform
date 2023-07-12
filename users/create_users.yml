@@ -1,25 +1,25 @@
 ---
-    - name: Créer les utilisateurs
+    - name: Create users profil
       user:
         name: "{{ item }}"
         shell: /bin/bash
         createhome: yes
       loop: "{{ admin_users }}"
 
-    - name: Ajouter les utilisateurs au groupe sudo
+    - name: Add users to the sudo group 
       lineinfile:
         dest: /etc/sudoers
         line: "{{ item }} ALL=(ALL) NOPASSWD: ALL"
       loop: "{{ admin_users }}"
 
-    - name: Transférer les clés publiques
+    - name: Transfer public keys
       authorized_key:
         user: "{{ item }}"
         state: present
         key: "{{ lookup('file', '/home/stevy/Github/exerciceApplication/stevy.pub') }}"
       loop: "{{ admin_users }}"
 
-    - name: Installer Vim et les utilitaires réseau
+    - name: Install Vim and networks tools
       apt:
         name:
           - vim
