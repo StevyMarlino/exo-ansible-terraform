@@ -3,9 +3,9 @@
     hosts: all
     vars:
       admin_users:
-        - user1
-        - user2
-        - user3
+        - stevy1
+        - stevy2
+        - stevy3
     tasks:
       - include_tasks: "{{ playbook_dir }}/users/create_users.yml"
 

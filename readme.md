@@ -7,6 +7,10 @@
 
 ## TERRAFORM  & KUBERNETES
 
+### Configuration du backend et gestion du state 
+ 1. Configurez un backend sur votre cluster kubernetes 
+ 2. Votre backend doit porter votre nom 
+
 #### Dites pourquoi on doit utiliser un déploiement au lieu de créer des pods de manière traditionnelle
 
 l'utilisation d'un déploiement au lieu de créer des pods de manière traditionnelle nous offre une meilleure gestion des mises à jour, une haute disponibilité, des rollbacks faciles, une évolutivité et une gestion plus efficace des versions de nos applications sur Kubernetes.
